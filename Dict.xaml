@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Style TargetType="FrameworkElement" x:Key="BaseStyle">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10" />
+    </Style>
+    <Style TargetType="StackPanel" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}"></Style>
+    <Style TargetType="Label" x:Key="BasicLabel">
+        <Setter Property="FontWeight" Value="DemiBold"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    </Style>
+</ResourceDictionary>

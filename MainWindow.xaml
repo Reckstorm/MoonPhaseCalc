@@ -1,0 +1,33 @@
+﻿<Window x:Class="MoonPhaseCalc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoonPhaseCalc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <Label Content="Date:" Style="{StaticResource BasicLabel}"></Label>
+            <DatePicker Name="Date_dp" Loaded="Date_dp_Loaded"></DatePicker>
+            <Label Content="Precision:" Name="Precision_lb" Style="{StaticResource BasicLabel}"></Label>
+            <Slider Value="2" Minimum="0" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" Name="Precision_sl" ValueChanged="Precision_sl_ValueChanged"></Slider>
+        </StackPanel>
+        <Button Content="Calculate" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"></Button>
+        <StackPanel Grid.Column="2">
+            <Label Content="Moon's age (days):" Style="{StaticResource BasicLabel}"></Label>
+            <Label Name="MoonAgeDays_lb"></Label>
+            <Label Content="Moon's age (percentage of full moon):" Style="{StaticResource BasicLabel}"></Label>
+            <Label Name="MoonAgePercent_lb"></Label>
+            <Label Content="Moonphase:" Style="{StaticResource BasicLabel}"></Label>
+            <Label Name="Moonphase_lb"></Label>
+            <Label Content="Direction:" Style="{StaticResource BasicLabel}"></Label>
+            <Label Name="Direction_lb"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
