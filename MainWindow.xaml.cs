@@ -49,6 +49,9 @@ namespace MoonPhaseCalc
 
             Age = date.Day + date.Month + LunarNumber;
             Age = Age > 30 ? Age - 30 : Age;
+
+            // There is no easy way to calculate % of illuminated moon surface,
+            // thus I've used the simple formula just to display the idea
             if (Age > 12.91963 && Age < 16.61096) AgePercent = 100;
             else if (Age < 12.91963) AgePercent = Age / 12.91963 * 100;
             else AgePercent = (lunarMonth - Age) / 12.91963 * 100;
