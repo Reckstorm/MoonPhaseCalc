@@ -11,4 +11,12 @@
         <Setter Property="FontWeight" Value="DemiBold"></Setter>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
+    <Style TargetType="Border" x:Key="BorderStyle">
+        <Setter Property="BorderThickness" Value="3"></Setter>
+        <Setter Property="CornerRadius" Value="150"></Setter>
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="Margin" Value="0 5"></Setter>
+        <Setter Property="MinHeight" Value="100"></Setter>
+        <Setter Property="MinWidth" Value="100"></Setter>
+    </Style>
 </ResourceDictionary>

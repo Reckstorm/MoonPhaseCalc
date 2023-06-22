@@ -18,16 +18,27 @@
             <Label Content="Precision:" Name="Precision_lb" Style="{StaticResource BasicLabel}"></Label>
             <Slider Value="2" Minimum="0" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" Name="Precision_sl" ValueChanged="Precision_sl_ValueChanged"></Slider>
         </StackPanel>
-        <Button Content="Calculate" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"></Button>
+        <StackPanel Grid.Column="1" Name="MoonContainer">
+            <!--<Border x:Name="Moon" Style="{DynamicResource BorderStyle}">
+                (0, 0.5; 0, 1; 1, 1; 1, 0; 1, 0.5; 0, 0)
+                <Border.Background>
+                    <RadialGradientBrush GradientOrigin="0, 0.5" RadiusY="1">
+                        <GradientStop Color="White" Offset="0" x:Name="stop1"/>
+                        <GradientStop Color="DarkGray" Offset="0"  x:Name="stop2"/>
+                    </RadialGradientBrush>
+                </Border.Background>
+            </Border>-->
+            <Button Content="Calculate" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"></Button>
+        </StackPanel>
         <StackPanel Grid.Column="2">
             <Label Content="Moon's age (days):" Style="{StaticResource BasicLabel}"></Label>
-            <Label Name="MoonAgeDays_lb"></Label>
+            <Label Name="MoonAgeDays_lb" Content=" "></Label>
             <Label Content="Moon's age (percentage of full moon):" Style="{StaticResource BasicLabel}"></Label>
-            <Label Name="MoonAgePercent_lb"></Label>
+            <Label Name="MoonAgePercent_lb" Content=" "></Label>
             <Label Content="Moonphase:" Style="{StaticResource BasicLabel}"></Label>
-            <Label Name="Moonphase_lb"></Label>
+            <Label Name="Moonphase_lb" Content=" "></Label>
             <Label Content="Direction:" Style="{StaticResource BasicLabel}"></Label>
-            <Label Name="Direction_lb"></Label>
+            <Label Name="Direction_lb" Content=" "></Label>
         </StackPanel>
     </Grid>
 </Window>
